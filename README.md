@@ -22,6 +22,8 @@ brew update
 ## install
 brew install --HEAD --with-jansson universal-ctags/universal-ctags/universal-ctags    
 brew install wget curl vim neovim yarn cmake global tmux rg fzf 
+## oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ## install with cask
 brew cask install qq wechat neteasemusic iina 
 brew cask install syncthing 
@@ -30,5 +32,3 @@ brew cask install kantu snipaste
 brew cask install baidunetdisk aria2gui 
 brew cask install docker zotero xmind wiznote foxitreader cajviewer
 brew cask install keka yandex google-chrome mysqlworkbench clashx cyberduck free-download-manager telegram
-## oh-my-zsh
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
