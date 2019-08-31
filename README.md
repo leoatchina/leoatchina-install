@@ -19,7 +19,7 @@ git remote set-url origin git://mirrors.ustc.edu.cn/homebrew-cask.git
 echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.bash_profile
 source ~/.bash_profile
 brew update
-## install
+## install basic
 brew install --HEAD --with-jansson universal-ctags/universal-ctags/universal-ctags    
 brew install wget curl vim neovim yarn cmake global tmux rg fzf 
 ## oh-my-zsh
@@ -31,4 +31,6 @@ brew cask install hyperswitch iterm2 alacritty mounty mos karabiner-elements han
 brew cask install kantu snipaste
 brew cask install baidunetdisk aria2gui 
 brew cask install docker zotero xmind wiznote foxitreader cajviewer
-brew cask install keka yandex google-chrome mysqlworkbench clashx cyberduck free-download-manager telegram
+brew cask install keka firefox yandex google-chrome mysqlworkbench clashx
+## install handly
+vscode filezilla free-download-manager vanilla vimR microsoft-office dictionnary
