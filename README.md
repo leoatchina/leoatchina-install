@@ -22,15 +22,19 @@ brew update
 ## install basic
 brew install --HEAD --with-jansson universal-ctags/universal-ctags/universal-ctags    
 brew install wget curl vim neovim yarn cmake global tmux rg fzf 
+##　use tsinghua mirrorr
+pip install pip -U
+pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 ## oh-my-zsh
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 ## install with cask
-brew cask install qq wechat neteasemusic iina 
+brew cask install qq wechat neteasemusic iina youtube-dl 
 brew cask install syncthing 
 brew cask install hyperswitch iterm2 alacritty mounty mos karabiner-elements handshaker hammerspoon
 brew cask install kantu snipaste
 brew cask install baidunetdisk aria2gui 
-brew cask install docker zotero xmind wiznote foxitreader cajviewer
-brew cask install keka firefox yandex google-chrome mysqlworkbench clashx
+brew cask install docker zotero xmind wiznote foxitreader cajviewer vimr
+brew cask install keka firefox yandex google-chrome mysqlworkbench clashx v2rayu
 ## install handly
-vscode filezilla free-download-manager vanilla vimR microsoft-office dictionnary
+vscode filezilla free-download-manager vanilla microsoft-office dictionnary shimo dr.unarchiver
+# windows
