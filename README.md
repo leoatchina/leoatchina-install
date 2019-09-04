@@ -1,4 +1,4 @@
-# introduce 
+# Introduce 
 My scripts for MOCOS LINXU WINDOWS softwares install
 # macOS
 ## disable warning
@@ -34,7 +34,19 @@ brew cask install hyperswitch iterm2 alacritty mounty mos karabiner-elements han
 brew cask install kantu snipaste
 brew cask install baidunetdisk aria2gui 
 brew cask install docker zotero xmind wiznote foxitreader cajviewer vimr
-brew cask install keka firefox yandex google-chrome mysqlworkbench clashx v2rayu
+brew cask install keka yandex google-chrome clashx v2rayu
 ## install handly
 vscode filezilla free-download-manager vanilla microsoft-office dictionnary shimo dr.unarchiver
 # windows
+## Running as administrator来打开PowerShell, install chocolatey
+Set-ExecutionPolicy RemoteSigned
+iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
+## install with chocolatey
+cinst anaconda3 mobaxterm microsoft-windows-terminal wsl wsl-ubuntu-1804 -y
+cinst ccleaner bandizip ditto -y
+cinst goldendict snipaste xnview cajviewer foxitreader sumatrapdf foxmail -y 
+cinst tim wechat googlechrome yandex -y 
+cinst everthing wox git neovim yarn zotero synctrayzor -y
+cinst potplayer netease-cloudmusic -y
+## install handly
+huorong office vscode filezilla edge clashx v2rayn qqinput freedownloadmanager dism
