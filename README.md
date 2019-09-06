@@ -63,10 +63,16 @@ Set-ExecutionPolicy RemoteSigned
 iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
 ## install with chocolatey
 cinst anaconda3 mobaxterm microsoft-windows-terminal wsl wsl-ubuntu-1804 -y
+
 cinst ccleaner bandizip ditto -y
+
 cinst goldendict snipaste xnview cajviewer foxitreader sumatrapdf foxmail -y
+
 cinst tim wechat googlechrome yandex -y
+
 cinst everthing wox git neovim yarn zotero synctrayzor -y
+
 cinst potplayer netease-cloudmusic -y
+
 ## install handly
 huorong office vscode filezilla edge clashx v2rayn qqinput freedownloadmanager dism
