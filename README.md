@@ -6,35 +6,24 @@ sudo spctl --master-disable
 ## install brew
 ### origin
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-### use china mirror
+### use tsinghua mirror
 ```
-curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install > /tmp/brew_install
-sed 's#https://github\.com/Homebrew/brew#git://mirrors\.ustc\.edu\.cn/brew\.git#g' /tmp/brew_install > /tmp/brew_install_new
-/usr/bin/ruby /tmp/brew_install_new
-cd "$(brew --repo)"
-git remote set-url origin https://mirrors.ustc.edu.cn/brew.git
-cd "$(brew --repo)/Library/Taps/homebrew/homebrew-core"
-git remote set-url origin https://mirrors.ustc.edu.cn/homebrew-core.git
-cd "$(brew --repo)/Library/Taps/homebrew/homebrew-cask"
-git remote set-url origin git://mirrors.ustc.edu.cn/homebrew-cask.git
-echo 'export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles' >> ~/.bash_profile
-source ~/.bash_profile
+git -C "$(brew --repo)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/brew.git
+git -C "$(brew --repo homebrew/core)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-core.git
+git -C "$(brew --repo homebrew/cask)" remote set-url origin https://mirrors.tuna.tsinghua.edu.cn/git/homebrew/homebrew-cask.git
 brew update
-
 ```
 
 ## oh-my-zsh
 ```
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
 ```
 ## install basic
 ```
 brew install --HEAD --with-jansson universal-ctags/universal-ctags/universal-ctags
 brew install wget curl vim neovim yarn cmake global tmux rg fzf
-
 ```
-##　use tsinghua mirrorr
+## pip use tsinghua mirrorr
 ```
 pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 pip3 install pip -U
@@ -52,12 +41,14 @@ brew cask install keka yandex google-chrome clashx v2rayu docker
 ```
 vscode filezilla free-download-manager vanilla microsoft-office dictionnary shimo dr.unarchiver baiduinput baidunetdisk
 ```
+
+
+
 # windows
 ## Running as administrator来打开PowerShell, install chocolatey
 ```
 Set-ExecutionPolicy RemoteSigned
 iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
-
 ```
 ## install with chocolatey
 ```
@@ -72,5 +63,4 @@ cinst potplayer netease-cloudmusic -y
 ## install handly
 ```
 huorong office vscode filezilla edge clashx v2rayn qqinput freedownloadmanager dism
-
 ```
