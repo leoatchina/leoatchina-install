@@ -48,6 +48,7 @@ vscode filezilla free-download-manager vanilla microsoft-office dictionnary shim
 ## Running as administrator来打开PowerShell, install chocolatey
 ```
 Set-ExecutionPolicy RemoteSigned
+<<<<<<< HEAD
 Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 
 iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
@@ -188,6 +189,9 @@ git clone --depth 1 https://github.com/powerline/fonts.git
 cd .\fonts\
 .\install.ps1
 cd ..
+=======
+iwr https://chocolatey.org/install.ps1 -UseBasicParsing | iex
+>>>>>>> b101a11d2677b7846d0e0589a4ab47930a21c138
 ```
 ## install with chocolatey
 ```
