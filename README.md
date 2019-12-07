@@ -47,6 +47,7 @@ vscode filezilla free-download-manager vanilla microsoft-office dictionnary shim
 
 
 ## windows
+
 ### 美化powershell
 *Running as administrator来打开PowerShell
 ```
@@ -56,30 +57,22 @@ Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
 choco feature enable -n allowGlobalConfirmation
-choco install git
+cinst git fzf lua sudo -y
+cinst anaconda3 mobaxterm microsoft-windows-terminal wsl wsl-ubuntu-1804 -y
+cinst ccleaner bandizip ditto -y
+cinst goldendict snipaste xnview cajviewer foxitreader sumatrapdf pdfxchangeviewer foxmail -y
+cinst tim wechat googlechrome yandex -y
+cinst everthing wox git neovim yarn zotero synctrayzor -y
+cinst potplayer netease-cloudmusic -y
 
-Install-Module -Name PSReadLine -Force -SkipPublisherCheck -Scope CurrentUser
-Install-Module posh-git -Scope CurrentUser
-Install-Module oh-my-posh -Scope CurrentUser
-Install-Module Get-ChildItemColor -AllowClobber -Scope CurrentUser
-Install-Module WindowsConsoleFonts -Scope CurrentUser
-Install-Module windows-screenfetch -Scope CurrentUser
+Install-Module -Name PSReadLine -Force -SkipPublisherCheck
+Install-Module PSColor
+Install-Module PSFzf
+Install-Module DirColors
 
-Install-Module PSColor -Scope CurrentUser
-Install-Module DirColors -Scope CurrentUser
-
-Import-Module posh-git
-Import-Module oh-my-posh
-Import-Module Get-ChildItemColor
-Import-Module WindowsConsoleFonts
-Import-Module windows-screenfetch
-
-
-if (!(Test-Path -Path $PROFILE )) { New-Item -Type File -Path $PROFILE -Force }
 
 @"
 #requires -Version 2 -Modules posh-git
-
 function Write-Theme {
     param(
         [bool]
@@ -159,52 +152,54 @@ function Write-Theme {
 `$sl.Colors.WithBackgroundColor = [ConsoleColor]::Magenta
 `$sl.Colors.VirtualEnvBackgroundColor = [System.ConsoleColor]::Red
 `$sl.Colors.VirtualEnvForegroundColor = [System.ConsoleColor]::White
-"@>$env:userprofile"\Documents\WindowsPowerShell\Modules\oh-my-posh\2.0.230\Themes\Paradox.psm1"
+"@ > $env:userprofile"\Documents\WindowsPowerShell\Modules\oh-my-posh\1.0.230\Themes\Paradox.psm1"
 
-
+if (!(Test-Path -Path $PROFILE )) { New-Item -Type File -Path $PROFILE -Force }
 @"
-chcp 65001
-Set-PSReadlineOption -EditMode Emacs
+Set-Theme Paradox
 Set-ExecutionPolicy -Scope CurrentUser Bypass
-function which(`$name) { Get-Command `$name | Select-Object Definition }
-function rmrf(`$item) { Remove-Item `$item -Recurse -Force }
-function mkfile(`$file) { "" | Out-File `$file -Encoding ASCII }
+Set-Alias ll Get-ChildItemColor -option AllScope
+Set-Alias ls Get-ChildItemColorFormatWide -option AllScope
 Import-Module posh-git
 Import-Module oh-my-posh
 Import-Module Get-ChildItemColor
 Import-Module WindowsConsoleFonts
 Import-Module windows-screenfetch
-Import-Module PSColor
 Import-Module DirColors
-Set-Alias l Get-ChildItemColor -option AllScope
-Set-Alias ls Get-ChildItemColorFormatWide -option AllScope
-Set-Theme Paradox
+Import-Module PSReadline
+Import-Module PSColor
+Import-Module PSFzf -ArgumentList 'Ctrl+t','Ctrl+r'
+function which($name) { Get-Command $name | Select-Object Definition }
+function rmrf($item) { Remove-Item $item -Recurse -Force }
+function mkfile($file) { "" | Out-File $file -Encoding ASCII }
 "@ > $PROFILE
 
-
-
-chcp 65001
-Set-PSReadlineOption -EditMode Emacs
-Set-Alias l Get-ChildItemColor -option AllScope
-Set-Alias ls Get-ChildItemColorFormatWide -option AllScope
-Set-Theme Paradox
 
 git clone --depth 1 https://github.com/powerline/fonts.git
 cd .\fonts\
 .\install.ps1
 cd ..
 ```
-### install with chocolatey
-```
-cinst anaconda3 mobaxterm microsoft-windows-terminal wsl wsl-ubuntu-1804 -y
-cinst ccleaner bandizip ditto -y
-cinst goldendict snipaste xnview cajviewer foxitreader sumatrapdf pdfxchangeviewer foxmail -y
-cinst tim wechat googlechrome yandex -y
-cinst everthing wox git neovim yarn zotero synctrayzor -y
-cinst potplayer netease-cloudmusic -y
-```
+
 
 ### install handly
 ```
 huorong office vscode filezilla edge clashx v2rayn qqinput freedownloadmanager dism
+```
+
+## jupyterlab
+###
+```
+jupyter labextension install @jupyter-widgets/jupyterlab-manager
+jupyter labextension install ipysheet
+jupyter labextension install @jupyterlab/toc
+jupyter labextension install jupyterlab-drawio
+jupyter labextension install jupyterlab-kernelspy
+jupyter labextension install jupyterlab-spreadsheet
+jupyter labextension install @krassowski/jupyterlab_go_to_definition
+jupyter labextension install @telamonian/theme-darcula
+jupyter labextension install @mohirio/jupyterlab-horizon-theme
+jupyter labextension install jupyterlab_vim
+jupyter labextension install @lckr/jupyterlab_variableinspector
+jupyter lab build
 ```
