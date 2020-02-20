@@ -1,5 +1,5 @@
 # Introduce
-My scripts for MOCOS LINUX WINDOWS softwares install
+My scripts for MOCOS LINUX WINDOWS softwares installation
 
 ## macOS
 
@@ -24,13 +24,13 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 ### install basic
 ```
 brew install --HEAD --with-jansson universal-ctags/universal-ctags/universal-ctags
-brew install wget curl vim neovim yarn cmake global tmux rg fzf
+brew install wget curl git vim neovim yarn cmake global tmux rg fzf
 ```
 ### pip use tsinghua mirrorr
 ```
 pip3 config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 pip3 install pip -U
-pip3 install neovim python-language-server pygments
+pip3 install pynvim python-language-server pygments neovim-reomote
 ```
 ### install with cask
 ```
@@ -42,7 +42,7 @@ brew cask install v2rayu clash syncthing
 ```
 ### install handly
 ```
-vscode filezilla free-download-manager vanilla microsoft-office dictionnary shimo dr.unarchiver baiduinput baidunetdisk
+vscode filezilla free-download-manager microsoft-office dictionnary shimo dr.unarchiver baiduinput baidunetdisk
 ```
 
 
