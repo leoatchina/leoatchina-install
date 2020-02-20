@@ -1,5 +1,5 @@
 # Introduce
-My scripts for MOCOS LINXU WINDOWS softwares install
+My scripts for MOCOS LINUX WINDOWS softwares install
 
 ## macOS
 
@@ -35,10 +35,10 @@ pip3 install neovim python-language-server pygments
 ### install with cask
 ```
 brew cask install qq wechat neteasemusic iina
-brew cask install syncthing
-brew cask install hyperswitch iterm2 alacritty mounty mos karabiner-elements handshaker hammerspoon
-brew cask install snipaste zotero xmind wiznote foxitreader cajviewer vimr
-brew cask install keka yandex google-chrome clashx v2rayu docker
+brew cask install hyperswitch iterm2 therm mounty mos karabiner-elements handshaker hammerspoon
+brew cask install snipaste zotero xmind wiznote foxitreader cajviewer
+brew cask install keka yandex google-chrome firefox microsoft-edge docker
+brew cask install v2rayu clash syncthing
 ```
 ### install handly
 ```
