@@ -60,17 +60,19 @@ choco feature enable -n allowGlobalConfirmation
 cinst git fzf lua sudo -y
 
 cinst ccleaner bandizip ditto -y
-cinst goldendict snipaste honeyview cajviewer foxitreader sumatrapdf pdfxchangeviewer foxmail -y
+cinst goldendict snipaste honeyview cajviewer foxitreader sumatrapdf pdfxchangeviewer -y
 cinst tim wechat filezilla brave firefox motrix nextcloud-client -y
 cinst potplayer netease-cloudmusic -y
 
 cinst everthing git vim neovim joplin notepad3 vscode nodejs yarn zotero utools -y
-cinst mobaxterm microsoft-windows-terminal -y
+cinst mobaxterm microsoft-windows-terminal alacritty -y
 cinst visualstudio2019community -y
 cinst wsl2 -y
 cinst clash-for-windows -y
 
 Install-Module -Name PSReadLine -Force -SkipPublisherCheck
+Install-Module posh-git -Scope CurrentUser
+Install-Module oh-my-posh -Scope CurrentUser
 Install-Module PSColor
 Install-Module PSFzf
 Install-Module DirColors
@@ -157,7 +159,7 @@ function Write-Theme {
 `$sl.Colors.WithBackgroundColor = [ConsoleColor]::Magenta
 `$sl.Colors.VirtualEnvBackgroundColor = [System.ConsoleColor]::Red
 `$sl.Colors.VirtualEnvForegroundColor = [System.ConsoleColor]::White
-"@ > $env:userprofile"\Documents\WindowsPowerShell\Modules\oh-my-posh\1.0.230\Themes\Paradox.psm1"
+"@ > $env:userprofile"\Documents\WindowsPowerShell\Modules\oh-my-posh\2.0.487\Themes\Paradox.psm1"
 
 if (!(Test-Path -Path $PROFILE )) { New-Item -Type File -Path $PROFILE -Force }
 @"
@@ -180,6 +182,7 @@ function mkfile($file) { "" | Out-File $file -Encoding ASCII }
 "@ > $PROFILE
 
 
+cd ~/config
 git clone --depth 1 https://github.com/powerline/fonts.git
 cd .\fonts\
 .\install.ps1
