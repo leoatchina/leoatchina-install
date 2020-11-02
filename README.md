@@ -61,7 +61,7 @@ cinst git fzf lua sudo -y
 cinst mobaxterm microsoft-windows-terminal -y
 cinst ccleaner bandizip ditto -y
 cinst goldendict snipaste xnview cajviewer foxitreader sumatrapdf pdfxchangeviewer foxmail -y
-cinst tim wechat googlechrome firefox -y
+cinst tim wechat edge brave firefox -y
 cinst everthing git gvim neovim yarn zotero nextcloud -y
 cinst potplayer netease-cloudmusic -y
 
