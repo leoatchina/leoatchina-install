@@ -60,12 +60,12 @@ choco feature enable -n allowGlobalConfirmation
 cinst git fzf lua sudo -y
 cinst mobaxterm microsoft-windows-terminal -y
 cinst ccleaner bandizip ditto -y
-cinst goldendict snipaste xnview cajviewer foxitreader sumatrapdf pdfxchangeviewer foxmail -y
+cinst goldendict snipaste honeyview cajviewer foxitreader sumatrapdf pdfxchangeviewer foxmail -y
 cinst tim wechat edge brave firefox motrix nextcloud -y
-cinst everthing git vim neovim yarn zotero -y
+cinst everthing git vim neovim joplin notepad3 vscode nodejs yarn zotero -y
 cinst potplayer netease-cloudmusic -y
 
-cinst visualstudio2019community joplin notepad3 vscode -y
+cinst visualstudio2019community -y
 cinst wsl2 -y
 
 Install-Module -Name PSReadLine -Force -SkipPublisherCheck
