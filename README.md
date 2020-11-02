@@ -61,14 +61,13 @@ cinst git fzf lua sudo -y
 
 cinst ccleaner bandizip ditto -y
 cinst goldendict snipaste honeyview cajviewer foxitreader sumatrapdf pdfxchangeviewer foxmail -y
-cinst tim wechat edge brave firefox motrix nextcloud-client -y
+cinst tim wechat filezilla brave firefox motrix nextcloud-client -y
 cinst potplayer netease-cloudmusic -y
 
 cinst everthing git vim neovim joplin notepad3 vscode nodejs yarn zotero utools -y
 cinst mobaxterm microsoft-windows-terminal -y
 cinst visualstudio2019community -y
 cinst wsl2 -y
-
 cinst clash-for-windows -y
 
 Install-Module -Name PSReadLine -Force -SkipPublisherCheck
@@ -190,7 +189,7 @@ cd ..
 
 ### install handly
 ```
-huorong office filezilla clashx v2rayn dism
+huorong office v2ray-trojan dism
 ```
 
 ## jupyterlab
