@@ -61,9 +61,11 @@ cinst git fzf lua sudo -y
 cinst mobaxterm microsoft-windows-terminal -y
 cinst ccleaner bandizip ditto -y
 cinst goldendict snipaste xnview cajviewer foxitreader sumatrapdf pdfxchangeviewer foxmail -y
-cinst tim wechat edge brave firefox -y
-cinst everthing git gvim neovim yarn zotero nextcloud -y
+cinst tim wechat edge brave firefox motrix -y
+cinst everthing git vim neovim yarn zotero nextcloud -y
 cinst potplayer netease-cloudmusic -y
+
+cinst visualstudio2019community joplin notepad3  -y
 
 Install-Module -Name PSReadLine -Force -SkipPublisherCheck
 Install-Module PSColor
