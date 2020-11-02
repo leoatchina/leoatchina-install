@@ -61,8 +61,8 @@ cinst git fzf lua sudo -y
 cinst anaconda3 mobaxterm microsoft-windows-terminal wsl wsl-ubuntu-1804 -y
 cinst ccleaner bandizip ditto -y
 cinst goldendict snipaste xnview cajviewer foxitreader sumatrapdf pdfxchangeviewer foxmail -y
-cinst tim wechat googlechrome yandex -y
-cinst everthing wox git neovim yarn zotero synctrayzor -y
+cinst tim wechat googlechrome firefox -y
+cinst everthing git gvim neovim yarn zotero nextcloud -y
 cinst potplayer netease-cloudmusic -y
 
 Install-Module -Name PSReadLine -Force -SkipPublisherCheck
