@@ -58,7 +58,7 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/in
 
 choco feature enable -n allowGlobalConfirmation
 cinst git fzf lua sudo -y
-cinst anaconda3 mobaxterm microsoft-windows-terminal wsl wsl-ubuntu-1804 -y
+cinst mobaxterm microsoft-windows-terminal -y
 cinst ccleaner bandizip ditto -y
 cinst goldendict snipaste xnview cajviewer foxitreader sumatrapdf pdfxchangeviewer foxmail -y
 cinst tim wechat googlechrome firefox -y
