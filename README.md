@@ -65,7 +65,7 @@ cinst tim wechat edge brave firefox motrix -y
 cinst everthing git vim neovim yarn zotero nextcloud -y
 cinst potplayer netease-cloudmusic -y
 
-cinst visualstudio2019community joplin notepad3  -y
+cinst visualstudio2019community joplin notepad3 wsl2 -y
 
 Install-Module -Name PSReadLine -Force -SkipPublisherCheck
 Install-Module PSColor
