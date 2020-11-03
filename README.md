@@ -71,8 +71,11 @@ cinst wsl2 -y
 cinst clash-for-windows -y
 
 Install-Module -Name PSReadLine -Force -SkipPublisherCheck
-Install-Module posh-git -Scope CurrentUser
-Install-Module oh-my-posh -Scope CurrentUser
+Install-Module posh-git
+Install-Module oh-my-posh
+Install-Module --AllowCobber Get-ChildItemColor
+Install-Module WindowsConsoleFonts
+Install-Module windows-screenfetch  
 Install-Module PSColor
 Install-Module PSFzf
 Install-Module DirColors
