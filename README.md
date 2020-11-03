@@ -60,11 +60,11 @@ choco feature enable -n allowGlobalConfirmation
 cinst git fzf lua sudo -y
 
 cinst ccleaner bandizip ditto -y
-cinst goldendict snipaste honeyview cajviewer foxitreader sumatrapdf pdfxchangeviewer -y
+cinst goldendict honeyview foxitreader sumatrapdf pdfxchangeviewer -y
 cinst tim wechat filezilla brave firefox motrix nextcloud-client -y
 cinst potplayer netease-cloudmusic -y
 
-cinst everthing git vim neovim joplin notepad3 vscode nodejs yarn zotero utools -y
+cinst everthing git vim neovim joplin notepad3 vscode nodejs yarn zotero powertoys -y
 cinst mobaxterm microsoft-windows-terminal alacritty -y
 cinst visualstudio2019community -y
 cinst wsl2 -y
