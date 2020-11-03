@@ -36,13 +36,13 @@ pip3 install pynvim python-language-server pygments neovim-reomote
 ```
 brew cask install qq wechat neteasemusic iina
 brew cask install hyperswitch iterm2 therm mounty mos karabiner-elements handshaker hammerspoon
-brew cask install snipaste zotero xmind wiznote foxitreader cajviewer
+brew cask install snipaste zotero xmind wiznote foxitreader cajviewer vscode
 brew cask install keka yandex google-chrome firefox microsoft-edge docker
 brew cask install v2rayu clash syncthing
 ```
 ### install handly
 ```
-vscode filezilla free-download-manager microsoft-office dictionnary shimo dr.unarchiver baiduinput baidunetdisk
+filezilla free-download-manager microsoft-office dictionnary shimo dr.unarchiver baiduinput baidunetdisk
 ```
 
 
@@ -64,7 +64,7 @@ cinst goldendict honeyview foxitreader sumatrapdf pdfxchangeviewer -y
 cinst tim wechat filezilla brave firefox motrix nextcloud-client -y
 cinst potplayer netease-cloudmusic -y
 
-cinst everthing git vim neovim joplin notepad3 vscode nodejs yarn zotero powertoys -y
+cinst everthing git vim neovim joplin notepad3 vscode  typora nodejs yarn zotero powertoys -y
 cinst mobaxterm microsoft-windows-terminal alacritty -y
 cinst visualstudio2019community -y
 cinst wsl2 -y
@@ -79,7 +79,6 @@ Install-Module windows-screenfetch
 Install-Module PSColor
 Install-Module PSFzf
 Install-Module DirColors
-
 
 @"
 #requires -Version 2 -Modules posh-git
@@ -184,14 +183,12 @@ function rmrf($item) { Remove-Item $item -Recurse -Force }
 function mkfile($file) { "" | Out-File $file -Encoding ASCII }
 "@ > $PROFILE
 
-
 cd ~/config
 git clone --depth 1 https://github.com/powerline/fonts.git
 cd .\fonts\
 .\install.ps1
 cd ..
 ```
-
 
 ### install handly
 ```
