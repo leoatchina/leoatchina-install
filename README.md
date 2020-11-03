@@ -66,9 +66,9 @@ cinst potplayer netease-cloudmusic -y
 
 cinst everthing git vim neovim joplin notepad3 vscode  typora nodejs yarn zotero powertoys -y
 cinst mobaxterm microsoft-windows-terminal alacritty -y
-cinst visualstudio2019community -y
+cinst visualstudio2019community anaconda3 -y
 cinst wsl2 -y
-cinst clash-for-windows -y
+cinst clash-for-windows v2rayn -y
 
 Install-Module -Name PSReadLine -Force -SkipPublisherCheck
 Install-Module posh-git
