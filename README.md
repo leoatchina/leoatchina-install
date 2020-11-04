@@ -198,7 +198,7 @@ cd ..
 
 ### install handly
 ```
-huorong office v2ray-trojan dism
+huorong office wps
 ```
 
 ## jupyterlab
