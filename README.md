@@ -62,11 +62,14 @@ cinst git fzf lua sudo -y
 
 cinst ccleaner bandizip ditto -y
 cinst goldendict honeyview foxitreader sumatrapdf pdfxchangeviewer -y
-cinst tim wechat filezilla brave vivaldi firefox motrix nextcloud-client wireshark -y
+cinst tim wechat filezilla brave vivaldi firefox motrix nextcloud-client wireshark telegram -y
 cinst potplayer netease-cloudmusic -y
 
-cinst everthing git vim neovim joplin notepad3 vscode typora nodejs yarn zotero powertoys -y
-cinst mobaxterm microsoft-windows-terminal alacritty -y
+cinst everthing git vim neovim joplin typora nodejs yarn zotero powertoys komodo-edit -y
+    au VimEnter,BufNewFile,BufRead *.vimrc*,*.vimrc.local,*.vimrc.plugs,*.vim set filetype=vim
+    au VimEnter,BufNewFile,BufRead *.vimrc*,*.vimrc.local,*.vimrc.plugs,*.vim set filetype=vim
+    au VimEnter,BufNewFile,BufRead *.vimrc*,*.vimrc.local,*.vimrc.plugs,*.vim set filetype=vim
+cinst mobaxterm microsoft-windows-terminal alacritty gsudo -y
 cinst visualstudio2019community anaconda3 -y
 cinst wsl2 docker -y
 cinst clash-for-windows v2rayn -y
