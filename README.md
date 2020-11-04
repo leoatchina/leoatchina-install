@@ -48,8 +48,9 @@ filezilla free-download-manager microsoft-office dictionnary shimo dr.unarchiver
 
 ## windows
 
+Running as administrator来打开PowerShell
+
 ### 美化powershell
-*Running as administrator来打开PowerShell
 ```
 Set-ExecutionPolicy RemoteSigned
 Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
@@ -61,13 +62,13 @@ cinst git fzf lua sudo -y
 
 cinst ccleaner bandizip ditto -y
 cinst goldendict honeyview foxitreader sumatrapdf pdfxchangeviewer -y
-cinst tim wechat filezilla brave firefox motrix nextcloud-client -y
+cinst tim wechat filezilla brave vivaldi firefox motrix nextcloud-client wireshark -y
 cinst potplayer netease-cloudmusic -y
 
-cinst everthing git vim neovim joplin notepad3 vscode  typora nodejs yarn zotero powertoys -y
+cinst everthing git vim neovim joplin notepad3 vscode typora nodejs yarn zotero powertoys -y
 cinst mobaxterm microsoft-windows-terminal alacritty -y
 cinst visualstudio2019community anaconda3 -y
-cinst wsl2 -y
+cinst wsl2 docker -y
 cinst clash-for-windows v2rayn -y
 
 Install-Module -Name PSReadLine -Force -SkipPublisherCheck
