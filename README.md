@@ -24,7 +24,7 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 ### install basic
 ```
 brew install --HEAD --with-jansson universal-ctags/universal-ctags/universal-ctags
-brew install wget curl git vim neovim yarn cmake global tmux rg fzf
+brew install wget curl git vim neovim yarn nodejs cmake global tmux rg fzf
 ```
 ### pip use tsinghua mirrorr
 ```
