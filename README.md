@@ -58,16 +58,18 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/in
 Install softwares
 ```
 choco feature enable -n allowGlobalConfirmation
-cinst git fzf lua sudo -y
+
+cinst git fzf lua sudo gsudo nodejs yarn -y
 
 cinst dismplusplus ccleaner bandizip ditto -y
 cinst goldendict honeyview foxitreader sumatrapdf -y
 cinst tim wechat filezilla brave vivaldi firefox motrix nextcloud-client wireshark telegram fiddler -y
 cinst potplayer netease-cloudmusic -y
 
-cinst everthing git vim neovim joplin typora nodejs yarn zotero powertoys notepad3 zeal -y
-cinst mobaxterm microsoft-windows-terminal alacritty gsudo -y
-cinst visualstudio2019community anaconda3 -y
+cinst everthing git vim neovim joplin typora zotero powertoys notepad3 zeal freefilesync -y
+cinst mobaxterm microsoft-windows-terminal -y
+cinst visualstudio2019community anaconda3 qt-creator-x64 -y
+cinst r r.studio -y
 cinst wsl2 docker -y
 
 cinst clash-for-windows v2rayn -y
@@ -198,7 +200,7 @@ cd ..
 
 ### install handly
 ```
-huorong office wps
+huorong office wps obsidian yuque
 ```
 
 ## jupyterlab
