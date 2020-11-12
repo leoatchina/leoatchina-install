@@ -67,8 +67,9 @@ cinst tim wechat filezilla brave vivaldi firefox motrix nextcloud-client wiresha
 cinst potplayer netease-cloudmusic mpv -y
 
 cinst everthing git vim neovim joplin typora zotero powertoys notepad3 zeal freefilesync -y
-cinst mobaxterm microsoft-windows-terminal mysql.workbench -y
+cinst mobaxterm microsoft-windows-terminal -y
 cinst visualstudio2019community anaconda3 -y
+cinst mysql.workbench sqlite sqlite.shell sqlitestudio -y
 cinst r r.studio -y
 cinst wsl2 docker -y
 
