@@ -11,20 +11,30 @@ iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/in
 Install softwares
 ```
 choco feature enable -n allowGlobalConfirmation
-
-cinst git fzf lua sudo gsudo nodejs yarn -y
-cinst dismplusplus ccleaner bandizip ditto -y
-cinst goldendict honeyview foxitreader sumatrapdf -y
-cinst tim wechat filezilla brave firefox motrix nextcloud-client wireshark telegram fiddler -y
+cinst sudo gsudo -y
+cinst dismplusplus bandizip ditto -y
 cinst potplayer netease-cloudmusic mpv -y
-cinst everthing git vim neovim joplin typora zotero powertoys notepad3 zeal freefilesync -y
-cinst mobaxterm microsoft-windows-terminal -y
-cinst visualstudio2019community anaconda3 -y
+cinst goldendict honeyview foxitreader sumatrapdf -y
+cinst tim wechat filezilla vivaldi firefox motrix nextcloud-client wireshark telegram fiddler -y
+cinst everthing vim neovim joplin typora zotero powertoys notepad3 zeal freefilesync -y
+```
+
+Install program tools
+```
+cinst fzf lua nodejs yarn -y
+cinst mobaxterm microsoft-windows-terminal git -y
 cinst mysql.workbench sqlite sqlite.shell sqlitestudio -y
-cinst r r.studio -y
 cinst wsl2 docker -y
+cinst anaconda3 -y
 cinst clash-for-windows v2rayn -y
 ```
+
+Install IDE
+```
+cinst visualstudio2019community -y
+cinst r r.studio -y
+```
+
 
 ### 美化powershell
 ```
