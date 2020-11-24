@@ -13,8 +13,8 @@ Install softwares
 choco feature enable -n allowGlobalConfirmation
 cinst sudo gsudo -y
 cinst dismplusplus bandizip ditto -y
-cinst potplayer netease-cloudmusic mpv -y
-cinst goldendict honeyview foxitreader sumatrapdf -y
+cinst potplayer netease-cloudmusic -y
+cinst honeyview foxitreader sumatrapdf -y
 cinst tim wechat filezilla vivaldi firefox motrix nextcloud-client wireshark telegram fiddler -y
 cinst everthing vim neovim joplin typora zotero powertoys notepad3 zeal freefilesync -y
 ```
@@ -159,5 +159,5 @@ cd ..
 ```
 ### install handly
 ```
-huorong office wps obsidian yuque utools
+huorong office wps obsidian yuque utools golendict
 ```
