@@ -25,7 +25,7 @@ cinst fzf lua nodejs yarn -y
 cinst mobaxterm microsoft-windows-terminal git -y
 cinst mysql.workbench sqlite sqlite.shell sqlitestudio -y
 cinst wsl2 docker -y
-cinst anaconda3 -y
+cinst anaconda3 msys2 -y
 cinst clash-for-windows v2rayn -y
 ```
 
