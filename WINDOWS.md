@@ -1,52 +1,77 @@
-
 ## windows
-Install choco
+
+setting Policy
 ```
 Set-ExecutionPolicy RemoteSigned
 Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
-
+```
+Install choco
+```
 iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+choco feature enable -n allowGlobalConfirmation
+```
+Install command tools
+```
+cinst mobaxterm microsoft-windows-terminal git -y
 ```
 
-Install softwares
+go on install
 ```
-choco feature enable -n allowGlobalConfirmation
 cinst sudo gsudo -y
 cinst dismplusplus bandizip ditto -y
-cinst potplayer netease-cloudmusic mpv -y
-cinst goldendict honeyview foxitreader sumatrapdf -y
-cinst tim wechat filezilla vivaldi firefox motrix nextcloud-client wireshark telegram fiddler -y
+cinst potplayer netease-cloudmusic -y
+cinst honeyview foxitreader sumatrapdf -y
+cinst tim wechat filezilla vivaldi brave firefox motrix nextcloud-client wireshark telegram fiddler -y
 cinst everthing vim neovim joplin typora zotero powertoys notepad3 zeal freefilesync -y
 ```
 
 Install program tools
 ```
 cinst fzf lua nodejs yarn -y
-cinst mobaxterm microsoft-windows-terminal git -y
 cinst mysql.workbench sqlite sqlite.shell sqlitestudio -y
-cinst wsl2 docker -y
 cinst anaconda3 -y
 cinst clash-for-windows v2rayn -y
 ```
 
-Install IDE
+
 ```
-cinst visualstudio2019community -y
+cinst docker-desktop -y
 cinst r r.studio -y
 ```
 
+```
+cinst visualstudio2019community -y
+```
+
+wsl2
+
+```
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+download and install https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+wsl --set-default-version 2
+
+cinst wsl2 -y
+cinst docker-desktop -y
+cinst wsl-ubuntu-1804 -y
+```
+
+
 
 ### 美化powershell
+
 ```
 Install-Module -Name PSReadLine -Force -SkipPublisherCheck
 Install-Module posh-git
 Install-Module oh-my-posh
-Install-Module --AllowCobber Get-ChildItemColor
+Install-Module Get-ChildItemColor -AllowClobber
 Install-Module WindowsConsoleFonts
 Install-Module windows-screenfetch
 Install-Module PSColor
 Install-Module PSFzf
 Install-Module DirColors
+
+
 
 @"
 #requires -Version 2 -Modules posh-git
