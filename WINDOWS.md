@@ -1,31 +1,38 @@
 ## windows
 
 setting Policy
+
 ```
 Set-ExecutionPolicy RemoteSigned
 Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 ```
+
 Install choco
+
 ```
 iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 choco feature enable -n allowGlobalConfirmation
 ```
+
 Install command tools
+
 ```
 cinst mobaxterm microsoft-windows-terminal git -y
 ```
 
 go on install
+
 ```
 cinst sudo gsudo -y
 cinst dismplusplus bandizip ditto -y
 cinst potplayer netease-cloudmusic -y
 cinst honeyview foxitreader sumatrapdf -y
-cinst tim wechat filezilla vivaldi brave firefox motrix nextcloud-client wireshark telegram fiddler -y
+cinst tim wechat filezilla vivaldi googlechrome firefox motrix nextcloud-client wireshark telegram fiddler -y
 cinst everthing vim neovim joplin typora zotero powertoys notepad3 zeal freefilesync -y
 ```
 
 Install program tools
+
 ```
 cinst fzf lua nodejs yarn -y
 cinst mysql.workbench sqlite sqlite.shell sqlitestudio -y
@@ -33,7 +40,6 @@ cinst wsl2 docker -y
 cinst anaconda3 -y
 cinst clash-for-windows v2rayn -y
 ```
-
 
 ```
 cinst docker-desktop -y
@@ -56,8 +62,6 @@ cinst wsl2 -y
 cinst docker-desktop -y
 cinst wsl-ubuntu-1804 -y
 ```
-
-
 
 ### 美化powershell
 
@@ -99,7 +103,9 @@ cd .\fonts\
 .\install.ps1
 cd ..
 ```
+
 ### install handly
+
 ```
 huorong office wps obsidian yuque utools golendict
 ```
