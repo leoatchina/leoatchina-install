@@ -32,10 +32,10 @@ pip3 install pynvim python-language-server pygments neovim-reomote
 ### install with cask
 ```
 brew cask install qq wechat neteasemusic iina
-brew cask install hyperswitch iterm2 therm mounty mos karabiner-elements handshaker hammerspoon
+brew cask install hyperswitch iterm2 mounty mos karabiner-elements handshaker hammerspoon
 brew cask install snipaste zotero xmind wiznote foxitreader cajviewer vscode
-brew cask install keka yandex google-chrome firefox microsoft-edge docker
-brew cask install v2rayu clash syncthing
+brew cask install keka google-chrome firefox microsoft-edge docker
+brew cask install v2rayu clash
 ```
 ### install handly
 ```
