@@ -28,7 +28,7 @@ cinst dismplusplus bandizip ditto -y
 cinst potplayer netease-cloudmusic -y
 cinst honeyview foxitreader sumatrapdf -y
 cinst tim wechat filezilla vivaldi googlechrome firefox motrix nextcloud-client wireshark telegram fiddler -y
-cinst everthing vim neovim joplin typora zotero powertoys notepad3 zeal freefilesync -y
+cinst everthing vim joplin typora zotero powertoys notepad3 zeal freefilesync -y
 ```
 
 Install program tools
