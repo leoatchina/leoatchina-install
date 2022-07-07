@@ -1,70 +1,59 @@
-## windows
+# windows
 
-setting Policy
+- Install winget/windows_terminal from window store
+- add edge mobarxterm wezterm to taskbar
 
+## Install with winget 
 ```
-Set-ExecutionPolicy RemoteSigned
-Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
-```
-
-Install choco
-
-```
-iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
-choco feature enable -n allowGlobalConfirmation
-```
-
-Install command tools
-
-```
-cinst mobaxterm microsoft-windows-terminal git -y
-```
-
-go on install
-
-```
-cinst sudo gsudo -y
-cinst dismplusplus bandizip ditto -y
-cinst potplayer netease-cloudmusic -y
-cinst honeyview foxitreader sumatrapdf -y
-cinst tim wechat filezilla vivaldi googlechrome firefox motrix nextcloud-client wireshark telegram fiddler -y
-cinst everthing vim neovim joplin typora zotero powertoys notepad3 zeal freefilesync -y
-```
-
-Install program tools
-
-```
-cinst fzf lua nodejs yarn -y
-cinst mysql.workbench sqlite sqlite.shell sqlitestudio -y
-cinst wsl2 docker -y
-cinst anaconda3 -y
-cinst clash-for-windows v2rayn -y
+winget install -e git
+winget install -e gsudo
+winget install -e peazip
+winget install -e powertoys
+winget install -e everything
+winget install -e firefox
+winget install -e filezilla
+winget install -e honeyview
+winget install -e qq
+winget install -e wechat
+winget install -e huorong
+winget install -e snipaste
+winget install -e anaconda3
+winget install -e foxitreader
+winget install -e honeyview
+winget install -e clash-for-window
+winget install -e nodejs
+npm install -g yarn
 ```
 
 ```
-cinst docker-desktop -y
-cinst r r.studio -y
+cinst nextcloud-client wireshark fiddler -y
 ```
 
+## install scoop
 ```
-cinst visualstudio2019community -y
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+# irm get.scoop.sh | iex
+
+$webClient = New-Object System.Net.WebClient
+$webClient.Proxy = New-Object System.Net.WebProxy('10.10.52.61', 7890)
+$webClient.DownloadString('https://get.scoop.sh') -replace "new-object net.webclient","$webClient" | Invoke-Expression
+scoop bucket add extra
+scoop bucket add nerd-fonts
+```
+## modify hosts
+```
+code C:\Windows\System32\drivers\etc
+199.232.68.133 raw.githubusercontent.com
 ```
 
-wsl2
-
+## scoop install
 ```
-dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-download and install https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
-wsl --set-default-version 2
-
-cinst wsl2 -y
-cinst docker-desktop -y
-cinst wsl-ubuntu-1804 -y
+scoop install fzf lua wget curl dismplusplus
+scoop install vim neovim joplin zotero notepad3 zeal obsidian vscode
+scoop install r rstudio potplayer mysql-workbench sqlitestudio idea pycharm
 ```
 
-### 美化powershell
-
+## 美化powershell
 ```
 Install-Module -Name PSReadLine -Force -SkipPublisherCheck
 Install-Module posh-git
@@ -76,10 +65,8 @@ Install-Module PSColor
 Install-Module PSFzf
 Install-Module DirColors
 
-
-if (!(Test-Path -Path $PROFILE )) { New-Item -Type File -Path $PROFILE -Force }
+New-Item -Type File -Path $PROFILE -Force
 @"
-  Set-Theme Paradox
   Set-ExecutionPolicy -Scope CurrentUser Bypass
   Set-Alias ll Get-ChildItemColor -option AllScope
   Set-Alias ls Get-ChildItemColorFormatWide -option AllScope
@@ -97,15 +84,23 @@ if (!(Test-Path -Path $PROFILE )) { New-Item -Type File -Path $PROFILE -Force }
   function mkfile($file) { "" | Out-File $file -Encoding ASCII }
 "@ > $PROFILE
 
-cd ~/config
+cd C:/Config
 git clone --depth 1 https://github.com/powerline/fonts.git
 cd .\fonts\
 .\install.ps1
 cd ..
 ```
 
-### install handly
+## wsl2
+```
+dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+download and install https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+wsl --set-default-version 2
 
 ```
-huorong office wps obsidian yuque utools golendict
+
+### install handly
+```
+huorong office wps yuque utools goldendict
 ```

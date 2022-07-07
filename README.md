@@ -1,8 +1,8 @@
 # Introduce
-My scripts for MOCOS LINUX WINDOWS softwares installation
+My scripts for MOCOS WINDOWS jupyterlab softwares installation
 
 [windows](./WINDOWS.md)
 
 [macos](./macos.md)
 
-[software](./software.md)
+[jupyterlab](./jupyterlab.md)
