@@ -25,9 +25,6 @@ winget install -e nodejs
 npm install -g yarn
 ```
 
-```
-cinst nextcloud-client wireshark fiddler -y
-```
 
 ## install scoop
 ```
@@ -51,6 +48,7 @@ code C:\Windows\System32\drivers\etc
 scoop install fzf lua wget curl dismplusplus
 scoop install vim neovim joplin zotero notepad3 zeal obsidian vscode
 scoop install r rstudio potplayer mysql-workbench sqlitestudio idea pycharm
+scoop install wireshark fiddler nextcloud 
 ```
 
 ## 美化powershell
@@ -102,5 +100,5 @@ wsl --set-default-version 2
 
 ### install handly
 ```
-huorong office wps yuque utools goldendict
+office wps yuque utools goldendict
 ```
