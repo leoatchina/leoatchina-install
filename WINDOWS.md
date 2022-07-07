@@ -1,19 +1,20 @@
 # windows
 
 - Install winget/windows_terminal from window store
-- add edge mobarxterm wezterm to taskbar
+- add edge mobarxterm to taskbar
 
 ## Install with winget 
 ```
 winget install -e git
 winget install -e gsudo
+winget install -e wezterm
 winget install -e peazip
 winget install -e powertoys
 winget install -e everything
 winget install -e firefox
 winget install -e filezilla
 winget install -e honeyview
-winget install -e qq
+winget install -e tim 
 winget install -e wechat
 winget install -e huorong
 winget install -e snipaste
@@ -46,7 +47,7 @@ code C:\Windows\System32\drivers\etc
 ## scoop install
 ```
 scoop install fzf lua wget curl dismplusplus
-scoop install vim neovim joplin zotero notepad3 zeal obsidian vscode
+scoop install vim neovim joplin zotero notepad3 zeal obsidian vscode goldendict
 scoop install r rstudio potplayer mysql-workbench sqlitestudio idea pycharm
 scoop install wireshark fiddler nextcloud 
 ```
@@ -100,5 +101,5 @@ wsl --set-default-version 2
 
 ### install handly
 ```
-office wps yuque utools goldendict
+office wps yuque utools snipaste
 ```
