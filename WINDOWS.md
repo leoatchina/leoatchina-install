@@ -46,7 +46,7 @@ code C:\Windows\System32\drivers\etc
 
 ## scoop install
 ```
-scoop install fzf lua wget curl dismplusplus
+scoop install fzf lua wget curl dismplusplus ripgrep clink
 scoop install vim neovim joplin zotero notepad3 zeal obsidian vscode goldendict
 scoop install r rstudio potplayer mysql-workbench sqlitestudio idea pycharm
 scoop install wireshark fiddler nextcloud 
