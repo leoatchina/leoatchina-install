@@ -13,14 +13,13 @@ winget install -e powertoys
 winget install -e everything
 winget install -e firefox
 winget install -e filezilla
-winget install -e honeyview
 winget install -e tim 
 winget install -e wechat
 winget install -e huorong
 winget install -e snipaste
 winget install -e anaconda3
 winget install -e foxitreader
-winget install -e honeyview
+winget install -e chrome
 winget install -e clash-for-window
 winget install -e nodejs
 npm install -g yarn
