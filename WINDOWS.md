@@ -13,6 +13,7 @@ winget install -e powertoys
 winget install -e everything
 winget install -e firefox
 winget install -e filezilla
+winget install -e qqwubi
 winget install -e tim 
 winget install -e wechat
 winget install -e huorong
@@ -34,8 +35,15 @@ Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 $webClient = New-Object System.Net.WebClient
 $webClient.Proxy = New-Object System.Net.WebProxy('10.10.52.61', 7890)
 $webClient.DownloadString('https://get.scoop.sh') -replace "new-object net.webclient","$webClient" | Invoke-Expression
+scoop bucket add java
 scoop bucket add extra
+scoop bucket add nirsoft
 scoop bucket add nerd-fonts
+scoop bucket add scoopet https://github.com/ivaquero/scoopet.git
+scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
+scoop install scoop-completion
+Import-Module "$($(Get-Item $(Get-Command scoop.ps1).Path).Directory.Parent.FullName)\modules\scoop-completion"
+
 ```
 ## modify hosts
 ```
@@ -77,6 +85,7 @@ New-Item -Type File -Path $PROFILE -Force
   Import-Module PSReadline
   Import-Module PSColor
   Import-Module PSFzf -ArgumentList 'Ctrl+t','Ctrl+r'
+  Import-Module "$($(Get-Item $(Get-Command scoop.ps1).Path).Directory.Parent.FullName)\modules\scoop-completion"
   function which($name) { Get-Command $name | Select-Object Definition }
   function rmrf($item) { Remove-Item $item -Recurse -Force }
   function mkfile($file) { "" | Out-File $file -Encoding ASCII }
