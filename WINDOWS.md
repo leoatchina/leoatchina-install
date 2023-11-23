@@ -59,7 +59,8 @@ code C:\Windows\System32\drivers\etc
 scoop install fzf lua wget curl dismplusplus ripgrep clink
 scoop install vim neovim joplin zotero notepad3 zeal obsidian vscode goldendict
 scoop install r rstudio potplayer mysql-workbench sqlitestudio idea obsidian
-scoop install wireshark fiddler nextcloud 
+scoop install wireshark fiddler nextcloud
+scoop install MicrosoftVisualStudioCommunity2022-install   
 ```
 
 ## 美化powershell
@@ -71,28 +72,11 @@ Install-Module Get-ChildItemColor -AllowClobber
 Install-Module WindowsConsoleFonts
 Install-Module windows-screenfetch
 Install-Module PSColor
-Install-Module PSFzf
 Install-Module DirColors
+Install-Module -Name PSFzf -RequiredVersion 2.0.0 -Scope CurrentUser -Force
 
-New-Item -Type File -Path $PROFILE -Force
-@"
-  Set-ExecutionPolicy -Scope CurrentUser Bypass
-  Set-Alias ll Get-ChildItemColor -option AllScope
-  Set-Alias ls Get-ChildItemColorFormatWide -option AllScope
-  Import-Module posh-git
-  Import-Module oh-my-posh
-  Import-Module Get-ChildItemColor
-  Import-Module WindowsConsoleFonts
-  Import-Module windows-screenfetch
-  Import-Module DirColors
-  Import-Module PSReadline
-  Import-Module PSColor
-  Import-Module PSFzf -ArgumentList 'Ctrl+t','Ctrl+r'
-  Import-Module "$($(Get-Item $(Get-Command scoop.ps1).Path).Directory.Parent.FullName)\modules\scoop-completion"
-  function which($name) { Get-Command $name | Select-Object Definition }
-  function rmrf($item) { Remove-Item $item -Recurse -Force }
-  function mkfile($file) { "" | Out-File $file -Encoding ASCII }
-"@ > $PROFILE
+
+
 
 cd C:/Config
 git clone --depth 1 https://github.com/powerline/fonts.git
@@ -100,6 +84,51 @@ cd .\fonts\
 .\install.ps1
 cd ..
 ```
+
+
+## $PROFILE
+notepad $PROFILE
+```
+Set-ExecutionPolicy -Scope CurrentUser Bypass
+Set-Alias ll Get-ChildItemColor -option AllScope
+Set-Alias ls Get-ChildItemColorFormatWide -option AllScope
+Import-Module posh-git
+Import-Module oh-my-posh
+Import-Module Get-ChildItemColor
+Import-Module WindowsConsoleFonts
+Import-Module windows-screenfetch
+Import-Module DirColors
+Import-Module PSReadline
+Import-Module PSColor
+Import-Module PSFzf -ArgumentList 'Ctrl+t','Ctrl+r'
+Import-Module "$($(Get-Item $(Get-Command scoop.ps1).Path).Directory.Parent.FullName)\modules\scoop-completion"
+
+# Utilities
+function rmrf($item) { Remove-Item $item -Recurse -Force }
+function mkfile($file) { "" | Out-File $file -Encoding ASCII }
+function which ($command) {
+  Get-Command -Name $command -ErrorAction SilentlyContinue |
+    Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
+}
+function touch($name){
+  if ($name) {
+    $file_path = Split-Path -Path $name
+    $file_name = Split-Path -Path $name -Leaf
+    if ($file_path -eq "") {
+      $file_path = "."
+    }
+    if (-Not (Test-Path($file_path))) {
+      New-Item -ItemType "directory" -Path $file_path
+    }
+    New-Item -Path $file_path -Name $file_name -ItemType "file"
+  }
+  else {
+     Write-Host "Command to create new file."
+  }
+}
+
+```
+
 
 ## wsl2
 ```
