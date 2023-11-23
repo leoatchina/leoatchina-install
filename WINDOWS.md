@@ -7,8 +7,6 @@
 ```
 winget install -e git
 winget install -e gsudo
-winget install -e wezterm
-winget install -e peazip
 winget install -e powertoys
 winget install -e everything
 winget install -e firefox
@@ -16,7 +14,6 @@ winget install -e filezilla
 winget install -e qqwubi
 winget install -e tim 
 winget install -e wechat
-winget install -e huorong
 winget install -e snipaste
 winget install -e anaconda3
 winget install -e foxitreader
@@ -24,6 +21,12 @@ winget install -e chrome
 winget install -e clash-for-window
 winget install -e nodejs
 npm install -g yarn
+```
+
+## optianl
+```
+winget install -e huorong
+winget install -e peazip
 ```
 
 
@@ -109,5 +112,5 @@ wsl --set-default-version 2
 
 ### install handly
 ```
-office wps yuque utools snipaste
+ms-office wps utools snipaste wezterm tabby
 ```
