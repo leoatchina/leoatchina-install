@@ -7,7 +7,6 @@
 ```
 winget install -e gsudo
 winget install -e powertoys
-winget install -e chrome
 winget install -e anaconda3
 winget install -e tim 
 winget install -e wechat
@@ -15,7 +14,7 @@ winget install -e nodejs
 winget install -e --id=Sogou.SogouWBInput
 npm install -g yarn
 ```
-## optinal
+## optional
 ```
 winget install -e huorong
 winget install -e peazip
@@ -46,10 +45,10 @@ code C:\Windows\System32\drivers\etc
 ```
 ## scoop install
 ```
-scoop install firefox filezilla
+scoop install firefox filezilla chrome-portable
 scoop install everything fzf lua wget curl dismplusplus ripgrep clink git 
-scoop install vim neovim joplin zotero notepad3 zeal obsidian vscode goldendict
-scoop install r rstudio potplayer mysql-workbench sqlitestudio idea obsidian
+scoop install vim neovim joplin zotero notepad-- zeal obsidian vscode goldendict
+scoop install r rstudio potplayer mysql-workbench sqlitestudio idea
 scoop install wireshark fiddler nextcloud
 scoop install MicrosoftVisualStudioCommunity2022-install   
 ```
