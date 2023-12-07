@@ -15,7 +15,7 @@ winget install -e nodejs
 winget install -e --id=Sogou.SogouWBInput
 npm install -g yarn
 ```
-## optianl
+## optinal
 ```
 winget install -e huorong
 winget install -e peazip
