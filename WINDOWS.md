@@ -5,36 +5,26 @@
 
 ## Install with winget 
 ```
-winget install -e git
 winget install -e gsudo
 winget install -e powertoys
-winget install -e everything
-winget install -e firefox
-winget install -e filezilla
-winget install -e qqwubi
+winget install -e chrome
+winget install -e anaconda3
 winget install -e tim 
 winget install -e wechat
-winget install -e snipaste
-winget install -e anaconda3
-winget install -e foxitreader
-winget install -e chrome
-winget install -e clash-for-window
 winget install -e nodejs
+winget install -e --id=Sogou.SogouWBInput
 npm install -g yarn
 ```
-
 ## optianl
 ```
 winget install -e huorong
 winget install -e peazip
 ```
 
-
 ## install scoop
 ```
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 # irm get.scoop.sh | iex
-
 $webClient = New-Object System.Net.WebClient
 $webClient.Proxy = New-Object System.Net.WebProxy('10.10.52.61', 7890)
 $webClient.DownloadString('https://get.scoop.sh') -replace "new-object net.webclient","$webClient" | Invoke-Expression
@@ -42,8 +32,9 @@ scoop bucket add java
 scoop bucket add extra
 scoop bucket add nirsoft
 scoop bucket add nerd-fonts
-scoop bucket add scoopet https://github.com/ivaquero/scoopet.git
 scoop bucket add apps https://github.com/kkzzhizhou/scoop-apps
+scoop bucket add lemon https://github.com/hoilc/scoop-lemon
+scoop bucket add scoopet https://github.com/ivaquero/scoopet.git
 scoop install scoop-completion
 Import-Module "$($(Get-Item $(Get-Command scoop.ps1).Path).Directory.Parent.FullName)\modules\scoop-completion"
 
@@ -53,10 +44,10 @@ Import-Module "$($(Get-Item $(Get-Command scoop.ps1).Path).Directory.Parent.Full
 code C:\Windows\System32\drivers\etc
 199.232.68.133 raw.githubusercontent.com
 ```
-
 ## scoop install
 ```
-scoop install fzf lua wget curl dismplusplus ripgrep clink
+scoop install firefox filezilla
+scoop install everything fzf lua wget curl dismplusplus ripgrep clink git 
 scoop install vim neovim joplin zotero notepad3 zeal obsidian vscode goldendict
 scoop install r rstudio potplayer mysql-workbench sqlitestudio idea obsidian
 scoop install wireshark fiddler nextcloud
